@@ -531,7 +531,7 @@ module BigBlueButton
       hash = BigBlueButtonFormatter.new(hash).default_formatting
 
       # if the return code is an error generates an exception
-      unless hash[:returncode] || hash["returncode"] # check for symbol or string - checking for symbol may not be needed.
+      unless hash[:returncode]
         exception = BigBlueButtonException.new(hash[:message])
         exception.key = hash.has_key?(:messageKey) ? hash[:messageKey] : ""
         raise exception
