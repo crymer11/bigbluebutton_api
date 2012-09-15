@@ -520,7 +520,7 @@ module BigBlueButton
 
       # 'Hashify' the XML
       @xml_response = @http_response.body
-      hash = Hash.from_xml(@xml_response)['response']
+      hash = Hash.from_xml_symbolized(@xml_response)[:response]
 
       # simple validation of the xml body
       unless hash.has_key?(:returncode)
