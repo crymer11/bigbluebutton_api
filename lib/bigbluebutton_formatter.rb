@@ -2,6 +2,8 @@ module BigBlueButton
 
   # Helper class to format the response hash received when the BigBlueButtonApi makes API calls
   class BigBlueButtonFormatter
+    require 'date'
+
     attr_accessor :hash
 
     def initialize(hash)
