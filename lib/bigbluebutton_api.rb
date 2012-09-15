@@ -332,7 +332,7 @@ module BigBlueButton
       response = send_api_request(:getMeetings, { :random => rand(9999999999) } )
 
       formatter = BigBlueButtonFormatter.new(response)
-      formatter.flatten_objects(:meetings, :meeting)
+      formatter.flatten_objects(:meetings, 'meeting')
       response[:meetings].each { |m| BigBlueButtonFormatter.format_meeting(m) }
       response
     end
