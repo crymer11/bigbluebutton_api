@@ -402,7 +402,7 @@ module BigBlueButton
       response = send_api_request(:getRecordings, options)
 
       formatter = BigBlueButtonFormatter.new(response)
-      formatter.flatten_objects(:recordings, :recording)
+      formatter.flatten_objects(:recordings, 'recording')
       response[:recordings].each { |r| BigBlueButtonFormatter.format_recording(r) }
       response
     end
