@@ -2,7 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |spec|
   spec.name = 'bigbluebutton_api'
-  spec.version = '1.1.5'
+  spec.version = '1.1.6'
   spec.extra_rdoc_files = ['README.rdoc', 'LICENSE', 'LICENSE_003', 'CHANGELOG.rdoc']
   spec.summary = 'Provides an interface to the BigBlueButton web meeting API (https://github.com/mconf/bigbluebutton-api-ruby)'
   spec.description = spec.summary
