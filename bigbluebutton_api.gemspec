@@ -14,5 +14,4 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency('xml-simple', '>= 1.1.1')
-  spec.add_runtime_dependency('date')
 end
