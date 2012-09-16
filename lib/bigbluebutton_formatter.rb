@@ -119,7 +119,25 @@ module BigBlueButton
       f.to_boolean(:published)
       f.to_datetime(:startTime)
       f.to_datetime(:endTime)
+      f.flatten_recording_formats
       rec
+    end
+
+    def flatten_recording_formats
+      if @hash[:playback].empty?
+        collection = []
+      else
+        node = @hash[:playback]['format']
+        if node.kind_of?(Array)
+          collection = node
+        else
+          collection = []
+          collection << node
+        end
+      end
+      @hash[:playback] = collection
+      @hash
+    end
     end
 
     # Simplifies the XML-styled hash node 'first'. Its value will then always be an Array.
