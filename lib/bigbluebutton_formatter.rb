@@ -138,7 +138,6 @@ module BigBlueButton
       @hash[:playback] = collection
       @hash
     end
-    end
 
     # Simplifies the XML-styled hash node 'first'. Its value will then always be an Array.
     #
