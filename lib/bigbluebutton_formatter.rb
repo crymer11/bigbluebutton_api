@@ -124,10 +124,10 @@ module BigBlueButton
     end
 
     def flatten_recording_formats
-      if @hash[:playback].empty?
+      if @hash['playback'].empty?
         collection = []
       else
-        node = @hash[:playback]['format']
+        node = @hash['playback']['format']
         if node.kind_of?(Array)
           collection = node
         else
@@ -135,7 +135,7 @@ module BigBlueButton
           collection << node
         end
       end
-      @hash[:playback] = collection
+      @hash['playback'] = collection
       @hash
     end
 
